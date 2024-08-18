@@ -6,11 +6,11 @@ const addButton = document.getElementById("add");
 const subButton = document.getElementById("substract");
 const mulButton = document.getElementById("multiply");
 const divButton = document.getElementById("divide");
-// function checkType(a: unknown, b: unknown) {
-//   if (typeof a !== "number" || typeof b !== "number") {
-//     alert("잘못된 입력입니다. 숫자를 입력해주십시오.");
-//   }
-// }
+function checkType(a, b) {
+    if (typeof a !== "number" || typeof b !== "number") {
+        alert("잘못된 입력입니다. 숫자를 입력해주십시오.");
+    }
+}
 function add(a, b) {
     return a + b;
 }
@@ -27,7 +27,7 @@ function divide(a, b) {
     return a / b;
 }
 addButton === null || addButton === void 0 ? void 0 : addButton.addEventListener("click", () => {
-    // checkType(num1, num2);
+    checkType(num1, num2);
     result.textContent = add(Number(num1.value), Number(num2.value)).toString();
 });
 subButton === null || subButton === void 0 ? void 0 : subButton.addEventListener("click", () => {
